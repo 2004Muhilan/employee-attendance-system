@@ -67,6 +67,17 @@ The React admin dashboard needs client-side configuration to authenticate users.
    VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
    ```
 
+### Step F: Flutter App Configuration
+The mobile app has been scrubbed of all credentials so it can be safely shared. The person running the project must inject their own Firebase credentials using the FlutterFire CLI.
+1. Open your terminal in the `emp_att_app/` directory.
+2. Ensure you have the Firebase CLI installed (`npm install -g firebase-tools`) and are logged in (`firebase login`).
+3. Ensure you have the FlutterFire CLI installed (`dart pub global activate flutterfire_cli`).
+4. Run the configuration command:
+   ```bash
+   flutterfire configure --project=your_project_id
+   ```
+5. Follow the terminal prompts. This will automatically replace the dummy placeholders in `lib/firebase_options.dart` and `android/app/google-services.json` with your real, safe Firebase client keys.
+
 ---
 
 ## FAQ: Do we need a script to setup Firestore Collections?
