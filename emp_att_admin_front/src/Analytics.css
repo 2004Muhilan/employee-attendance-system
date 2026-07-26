@@ -1,0 +1,368 @@
+/* Analytics.css */
+
+.admin-page-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- NAVBAR (Shared styles from previous pages) --- */
+.admin-navbar {
+    background-color: white;
+    height: 64px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: opacity 0.2s;
+}
+
+.navbar-left:hover {
+    opacity: 0.8;
+}
+
+.navbar-logo {
+    color: #2196f3;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: #212121;
+    margin: 0;
+}
+
+.navbar-center {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #616161;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+    color: #212121;
+}
+
+.nav-link.active {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196f3;
+    font-weight: 600;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-profile-sm {
+    background-color: #f0f7ff;
+    padding: 6px 12px;
+    border-radius: 16px;
+}
+
+.admin-name-sm {
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 14px;
+}
+
+.logout-btn-sm {
+    background: none;
+    border: 1px solid #ffcdd2;
+    color: #d32f2f;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.logout-btn-sm:hover {
+    background-color: #ffebee;
+}
+
+/* --- MAIN CONTENT --- */
+.admin-main-content {
+    flex: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 32px;
+    width: 100%;
+}
+
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.page-title {
+    font-size: 24px;
+    color: #212121;
+    margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+    color: #616161;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* --- CONTROLS --- */
+.analytics-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.toggle-group {
+    display: flex;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #616161;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toggle-btn.active {
+    background-color: white;
+    color: #2196f3;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-dropdown {
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    color: #212121;
+    outline: none;
+    cursor: pointer;
+    min-width: 140px;
+}
+
+.filter-dropdown:focus {
+    border-color: #2196f3;
+}
+
+.eid-select {
+    font-weight: 600;
+    color: #1976d2;
+}
+
+/* --- SUMMARY CARDS --- */
+.summary-cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.summary-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-green {
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.text-green {
+    color: #4caf50;
+}
+
+.bg-orange {
+    background-color: rgba(255, 152, 0, 0.1);
+}
+
+.text-orange {
+    color: #ff9800;
+}
+
+.bg-red {
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.text-red {
+    color: #f44336;
+}
+
+.summary-info h4 {
+    margin: 0 0 4px 0;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.summary-info h2 {
+    margin: 0;
+    color: #212121;
+    font-size: 28px;
+}
+
+/* --- DATA TABLE CARD --- */
+.data-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: middle;
+}
+
+.data-table th {
+    background-color: #fafafa;
+    color: #616161;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-row-hover:hover {
+    background-color: #f9fbfd;
+}
+
+.data-table strong {
+    color: #212121;
+}
+
+/* Progress Bar inside Table */
+.progress-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-cell span {
+    font-weight: 600;
+    color: #424242;
+    min-width: 40px;
+}
+
+.progress-bar-bg {
+    height: 8px;
+    width: 100px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.bg-success {
+    background-color: #4caf50;
+}
+
+.bg-warning {
+    background-color: #ff9800;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/* --- STATUS BADGES --- */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-approved {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-rejected {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .summary-cards-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

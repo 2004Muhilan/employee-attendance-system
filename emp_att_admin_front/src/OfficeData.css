@@ -1,0 +1,391 @@
+/* OfficeData.css */
+
+.admin-page-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- NAVBAR (Same as Registration Requests) --- */
+.admin-navbar {
+    background-color: white;
+    height: 64px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: opacity 0.2s;
+}
+
+.navbar-left:hover {
+    opacity: 0.8;
+}
+
+.navbar-logo {
+    color: #2196f3;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: #212121;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.navbar-center {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #616161;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+    color: #212121;
+}
+
+.nav-link.active {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196f3;
+    font-weight: 600;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-profile-sm {
+    background-color: #f0f7ff;
+    padding: 6px 12px;
+    border-radius: 16px;
+}
+
+.admin-name-sm {
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 14px;
+}
+
+.logout-btn-sm {
+    background: none;
+    border: 1px solid #ffcdd2;
+    color: #d32f2f;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.logout-btn-sm:hover {
+    background-color: #ffebee;
+}
+
+/* --- MAIN CONTENT --- */
+.admin-main-content {
+    flex: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 32px;
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 24px;
+    color: #212121;
+    margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+    color: #616161;
+    font-size: 15px;
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #1976d2;
+}
+
+/* --- DATA TABLE CARD --- */
+.data-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: middle;
+}
+
+.data-table th {
+    background-color: #fafafa;
+    color: #616161;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-row-hover:hover {
+    background-color: #f9fbfd;
+}
+
+/* --- SPECIFIC CELL STYLES --- */
+.office-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.office-details strong {
+    color: #212121;
+    font-size: 15px;
+}
+
+.office-id {
+    color: #2196f3;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgba(33, 150, 243, 0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.address-cell {
+    color: #424242;
+    font-size: 14px;
+    max-width: 250px;
+    line-height: 1.4;
+}
+
+.timing-cell {
+    font-size: 13px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.time-label {
+    color: #9e9e9e;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.location-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: #424242;
+}
+
+.location-cell strong {
+    color: #757575;
+    font-weight: 500;
+}
+
+/* --- EDIT BUTTON --- */
+.btn-edit {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    color: #424242;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-edit:hover {
+    border-color: #2196f3;
+    color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.05);
+}
+
+/* --- MODAL & FORM STYLES --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #9e9e9e;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #f44336;
+}
+
+/* Form Layouts */
+.office-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group.full-width {
+    flex: 100%;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #424242;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #212121;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+/* Modal Bottom Actions */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+.btn-cancel {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    color: #616161;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #1976d2;
+}
